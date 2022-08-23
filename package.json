@@ -2,6 +2,9 @@
   "name": "conversion-app",
   "version": "1.0.0",
   "description": "contains microservices for converting distances, weights, and temperatures",
+  "engines": {
+    "node": "18.x"
+  },
   "main": "app.js",
   "scripts": {
     "build": "node app.js"
