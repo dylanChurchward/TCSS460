@@ -1,9 +1,10 @@
 var express = require("express");
 var app = express();
 
-const PORT = process.env.PORT || 80;
+const PORT = 3001;
 
-app.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
+
+
 
 // convert celcius to fahrenheit microservice
 app.get('/celciusToFahrenheit/:num', function(req, res) {
@@ -47,9 +48,9 @@ app.get('/kilogramsToPounds/:num', function(req, res) {
     res.json({"result": result});
 });
 
-// app.listen(process.env.PORT, () => {
-//     console.log(`Server running on port ${process.env.PORT}`);
-// }); 
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`Server RUNNNNNNING on port ${PORT}`);
+});
 
 
 
