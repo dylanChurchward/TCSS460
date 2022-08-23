@@ -3,9 +3,9 @@ var app = express();
 
 
 // enable port 3000 to listen to incoming HTTP requests
-app.listen(3000, function () {
-    console.log("API verson 1.0.0 is running on port 3000");
-}); 
+// app.listen(3000, function () {
+//     console.log("API verson 1.0.0 is running on port 3000");
+// }); 
 
 // convert celcius to fahrenheit microservice
 app.get('/celciusToFahrenheit/:num', function(req, res) {
@@ -49,9 +49,9 @@ app.get('/kilogramsToPounds/:num', function(req, res) {
     res.json({"result": result});
 });
 
-// app.listen(process.env.PORT || PORT, () => {
-//     console.log(`Server running on port ${PORT}`);
-// }); 
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+}); 
 
 
 
