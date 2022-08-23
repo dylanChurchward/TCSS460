@@ -7,10 +7,6 @@ app.listen(3000, function () {
     console.log("API verson 1.0.0 is running on port 3000");
 }); 
 
-app.listen(process.env.PORT | PORT, () => {
-    console.log(`Server running on port${PORT}`);
-}); 
-
 // convert celcius to fahrenheit microservice
 app.get('/celciusToFahrenheit/:num', function(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*"); // this line allows the local server to work properly while using "live server"
@@ -52,6 +48,10 @@ app.get('/kilogramsToPounds/:num', function(req, res) {
     var result = Number(req.params.num) * 2.2
     res.json({"result": result});
 });
+
+app.listen(process.env.PORT | PORT, () => {
+    console.log(`Server running on port${PORT}`);
+}); 
 
 
 
