@@ -49,7 +49,7 @@ app.get('/kilogramsToPounds/:num', function(req, res) {
     res.json({"result": result});
 });
 
-app.listen(process.env.PORT | PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}`);
 }); 
 
