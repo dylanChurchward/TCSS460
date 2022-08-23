@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3000
 
 
 
@@ -48,7 +48,7 @@ app.get('/kilogramsToPounds/:num', function(req, res) {
     res.json({"result": result});
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server RUNNNNNNING on port ${process.env.PORT}`);
 });
 
