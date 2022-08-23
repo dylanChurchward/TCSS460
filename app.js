@@ -1,11 +1,9 @@
 var express = require("express");
 var app = express();
 
+const PORT = process.env.PORT || 5001;
 
-// enable port 3000 to listen to incoming HTTP requests
-// app.listen(3000, function () {
-//     console.log("API verson 1.0.0 is running on port 3000");
-// }); 
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
 
 // convert celcius to fahrenheit microservice
 app.get('/celciusToFahrenheit/:num', function(req, res) {
