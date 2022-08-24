@@ -4,8 +4,6 @@ var app = express();
 const PORT = process.env.PORT || 3000
 
 
-
-
 // convert celcius to fahrenheit microservice
 app.get('/celciusToFahrenheit/:num', function(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*"); // this line allows the local server to work properly while using "live server"
